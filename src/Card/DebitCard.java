@@ -12,9 +12,15 @@ import Account.Account;
  */
 public class DebitCard {
     private Account account;
+
+    public Account getAccount() {
+        return account;
+    }
+    
+    
     
     public boolean MakePurchase(double amount){
         
-        return false;  
+        return true;  
     }
 }

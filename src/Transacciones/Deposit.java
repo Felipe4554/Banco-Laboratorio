@@ -17,6 +17,7 @@ public class Deposit extends Transaction {
         super(amount, source, date);
     }
     
+    @Override
     public boolean execute(){
         return true;
     }
