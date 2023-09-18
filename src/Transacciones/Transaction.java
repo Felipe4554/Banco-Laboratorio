@@ -4,6 +4,7 @@
  */
 package Transacciones;
 
+import Account.Account;
 import java.util.Date;
 
 /**

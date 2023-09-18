@@ -4,6 +4,7 @@
  */
 package Transacciones;
 
+import Account.Account;
 import java.util.Date;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Date;
 public class Transfer extends Transaction {
     private Account destination;
 
-    public Transfer(Account destination, double amount, Object source, Date date) {
+    public Transfer(Account destination, double amount, Account source, Date date) {
         super(amount, source, date);
         this.destination = destination;
     }
