@@ -9,8 +9,17 @@ public class ColonAccount extends Account {
     }
     
     public boolean transfer(Account destination, double amount) {
-        
-        return false;
-        
+        if (destination instanceof DollarAccount) {
+            double conversionRate = DollarAccount.exchangeRate();
+            double amountInDollars = amount / conversionRate;
+            if (super.withdraw(amount)) {
+                destination.deposit(amountInDollars);
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return super.transfer(destination, amount);
+        }
     }
 }

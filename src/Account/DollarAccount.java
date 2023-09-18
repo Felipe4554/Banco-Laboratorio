@@ -8,15 +8,22 @@ public class DollarAccount extends Account {
         super(number, balance, customer, active);
     }
     
-    public static double exchangeRate() {
-        
-        return 0;
-        
+    public static double exchangeRate() {   
+        return 530;
     }
     
     public boolean transfer(Account destination, double amount) {
-        
-        return false;
-        
+        if (destination instanceof ColonAccount) {
+            double conversionRate = DollarAccount.exchangeRate();
+            double amountInColones = amount * conversionRate;
+            if (super.withdraw(amount)) {
+                destination.deposit(amountInColones);
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return super.transfer(destination, amount);
+        }
     }
 }

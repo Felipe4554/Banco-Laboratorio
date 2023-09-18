@@ -39,20 +39,33 @@ public abstract class Account {
     }
     
     public boolean deposit(double amount) {
-        
-        return false;
-        
+        if (amount > 0) {
+            balance += amount;
+            return true;
+        } else {
+            return false;
+        }
     }
     
     public boolean withdraw(double amount) {
-        
-        return false;
-        
+        if (amount > 0 && balance >= amount) {
+            balance -= amount;
+            return true;
+        } else {
+            return false;
+        }
     }
     
     public boolean transfer(Account destination, double amount) {
-        
-        return false;
-        
+        if (amount > 0 && balance >= amount) {
+            if (withdraw(amount)) {
+                destination.deposit(amount);
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
 }
