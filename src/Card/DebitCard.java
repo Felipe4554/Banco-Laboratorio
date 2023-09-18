@@ -11,11 +11,11 @@ import Account.Account;
  * @author ´Felipe Chacón
  */
 public class DebitCard {
-//    private Account account;
-//
-//    public Account getAccount() {
-//        return account;
-//    }
+    private Account account;
+
+    public Account getAccount() {
+        return account;
+    }
     
     
     
