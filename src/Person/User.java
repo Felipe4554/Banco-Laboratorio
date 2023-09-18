@@ -1,4 +1,4 @@
-package Usuarios;
+package Person;
 
 /**
  *
@@ -11,7 +11,7 @@ public class User extends Person{
     public User(String username, int password, String id, String name) {
         super(id, name);
         this.username = username;
-        this.password = password;
+        this.password = encrypt(password);
     }
 
     public String getUsername() {

@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface Dao <Class>{
     //OPERACIONES CRUD
-    public boolean create(Class obj);
+    public boolean create(Class obj);  
     public List<Class> readAll();
     public boolean update (Class obj);
     public boolean delete(Class obj);

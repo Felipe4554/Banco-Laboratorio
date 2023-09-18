@@ -1,22 +1,26 @@
 package Account;
 
-import Usuarios.Customer;
+import Person.Customer;
 
 public class ColonAccount extends Account {
     
-    public ColonAccount(String number, double balance, Customer customer, boolean active) {
-        super(number, balance, customer, active);
+    public ColonAccount(String number, double balance, Customer customer) {
+        super(number, balance, customer);
+    }
+
+    public ColonAccount(String number, Customer customer) {
+        super(number, customer);
     }
     
     public boolean transfer(Account destination, double amount) {
         if (destination instanceof DollarAccount) {
-            double conversionRate = DollarAccount.exchangeRate();
-            double amountInDollars = amount / conversionRate;
-            if (super.withdraw(amount)) {
-                destination.deposit(amountInDollars);
+            double exchangeRate = DollarAccount.getExchangeRate();
+            double convertedAmount = amount / exchangeRate;
+
+            if (super.transfer(destination, convertedAmount)) {
                 return true;
             } else {
-                return false;
+                return false; 
             }
         } else {
             return super.transfer(destination, amount);
