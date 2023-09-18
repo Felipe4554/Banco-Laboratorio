@@ -4,6 +4,7 @@
  */
 package Transacciones;
 
+import Account.Account;
 import java.util.Date;
 
 /**
@@ -11,10 +12,11 @@ import java.util.Date;
  * @author rsand
  */
 public class Deposit extends Transaction {
-    
-    public Deposit(double amount, Object source, Date date) {
+
+    public Deposit(double amount, Account source, Date date) {
         super(amount, source, date);
     }
+    
     public boolean execute(){
         return true;
     }

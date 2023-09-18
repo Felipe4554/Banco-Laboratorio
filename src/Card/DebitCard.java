@@ -4,6 +4,8 @@
  */
 package Card;
 
+import Account.Account;
+
 /**
  *
  * @author ´Felipe Chacón
