@@ -1,6 +1,6 @@
 package Account;
 
-import Usuarios.Customer;
+import Person.Customer;
 
 public abstract class Account {
     private String number;
@@ -24,14 +24,14 @@ public abstract class Account {
         return active;
     }
 
-    public Account(String number, double balance, Customer customer, boolean active) {
+    public Account(String number, double balance, Customer customer) {
         this.number = number;
         this.balance = balance;
         this.customer = customer;
         this.active = true;
     }
 
-    public Account(String number, Customer customer, boolean active) {
+    public Account(String number, Customer customer) {
         this.number = number;
         this.balance = 0;
         this.customer = customer;
@@ -56,7 +56,7 @@ public abstract class Account {
         }
     }
     
-    public boolean transfer(Account destination, double amount) {
+      public boolean transfer(Account destination, double amount) {
         if (amount > 0 && balance >= amount) {
             if (withdraw(amount)) {
                 destination.deposit(amount);

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Usuarios;
+package Person;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -13,7 +13,7 @@ import java.util.Date;
  * @author rsand
  */
 public class Customer extends Person {
-   private Date dateOfBirth; //solo get
+   private Date dateOfBirth;
    private String phone;  
    private String email;
    private String address;
@@ -25,6 +25,15 @@ public class Customer extends Person {
         this.email = email;
         this.address = address;
     }
+
+    public Customer(Date dateOfBirth, String email, String address, String id, String name) {
+        super(id, name);
+        this.dateOfBirth = dateOfBirth;
+        this.phone = "";
+        this.email = email;
+        this.address = address;
+    }
+    
 
     public Date getDateOfBirth() {
         return dateOfBirth;
