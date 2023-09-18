@@ -1,8 +1,9 @@
 package Account;
 
+import StatusControl.StatusControl;
 import Usuarios.Customer;
 
-public abstract class Account {
+public abstract class Account implements StatusControl {
     private String number;
     private double balance;
     private Customer customer;
@@ -24,7 +25,7 @@ public abstract class Account {
         return active;
     }
 
-    public Account(String number, double balance, Customer customer, boolean active) {
+    public Account(String number, double balance, Customer customer) {
         this.number = number;
         this.balance = balance;
         this.customer = customer;
@@ -67,5 +68,15 @@ public abstract class Account {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public void activate() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void deactivate() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

@@ -16,7 +16,11 @@ public class DebitCard {
     public Account getAccount() {
         return account;
     }
-    
+
+    public DebitCard(Account account) {
+        this.account = account;
+        // debe heredar el numero de tarjeta number = numer;
+    }
     
     
     public boolean MakePurchase(double amount){

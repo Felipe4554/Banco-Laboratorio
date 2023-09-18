@@ -24,6 +24,12 @@ public class CreditCard {
     public static double getInterestRate() {
         return interestRate;
     }
+
+    public CreditCard(double balance, double creditLimit) {
+        this.balance = balance;
+        this.creditLimit = creditLimit;
+        //Hay que añadir la tasa de interes
+    }
     
     public boolean MakePurchase(double amount){
         
