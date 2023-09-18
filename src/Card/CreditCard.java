@@ -9,5 +9,29 @@ package Card;
  * @author ´Felipe Chacón
  */
 public class CreditCard {
+    private double balance;
+    private double creditLimit;
+    private static double interestRate;
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public double getCreditLimit() {
+        return creditLimit;
+    }
+
+    public static double getInterestRate() {
+        return interestRate;
+    }
     
+    public boolean MakePurchase(double amount){
+        
+        return true;  
+    }
+    
+    public boolean MakePayment(double amount){
+        
+        return true;  
+    }
 }

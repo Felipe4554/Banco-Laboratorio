@@ -9,10 +9,16 @@ package Card;
  * @author ´Felipe Chacón
  */
 public class DebitCard {
-    private Account account;
+//    private Account account;
+//
+//    public Account getAccount() {
+//        return account;
+//    }
+    
+    
     
     public boolean MakePurchase(double amount){
         
-        return false;  
+        return true;  
     }
 }
