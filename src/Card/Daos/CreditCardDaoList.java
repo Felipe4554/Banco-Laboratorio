@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Usuarios.Dao;
+package Card.Daos;
 
+import Card.Dtos.CreditCardDto;
 import Dao.Dao;
-import Usuarios.Dtos.UserDto;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,33 +13,31 @@ import java.util.List;
  *
  * @author ´Felipe Chacón
  */
-public class UserDaoList implements Dao<UserDto>{
+public class CreditCardDaoList implements Dao <CreditCardDto> {
 
-    private HashMap<String, UserDto> userList;
+    private HashMap <String, CreditCardDto> creditcardlist;
 
-    public UserDaoList() {
-        userList = new HashMap();
+    public CreditCardDaoList() {
+        this.creditcardlist = new HashMap();
     }
     
-    
     @Override
-    public boolean create(UserDto user) {
-        if (user == null) return false;
-       userList.put(user.getId(), user);
-    }
-
-    @Override
-    public List<UserDto> readAll() {
+    public boolean create(CreditCardDto obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public boolean update(UserDto obj) {
+    public List<CreditCardDto> readAll() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public boolean delete(UserDto obj) {
+    public boolean update(CreditCardDto obj) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public boolean delete(CreditCardDto obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
