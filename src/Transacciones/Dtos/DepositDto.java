@@ -8,14 +8,12 @@ import java.util.Date;
  *
  * @author rsand
  */
-public class DepositDto extends Transaction {
-
-    public DepositDto(double amount, Account source) {
-        super(amount, source);
-    }
+public class DepositDto   {
+    private double amount;
+    private Account source;
     
-    @Override
-    public boolean execute(){    //ARREGLAR, AVERIGUAR Si se ELIMINA O NO
-        return true;
+    public DepositDto(double amount, Account source) {
+        this.amount = amount;
+        this.source = source;
     }
 }
