@@ -2,18 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Usuarios;
+package Person.Dtos;
+
+import Person.*;
 
 /**
  *
  * @author rsand
  */
 
-public abstract class Person  {
+public abstract class PersonDto  {
     private String id;
     private String name;
 
-    public Person(String id, String name) {
+    public PersonDto(String id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -26,7 +28,4 @@ public abstract class Person  {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 }

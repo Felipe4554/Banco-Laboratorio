@@ -24,7 +24,6 @@ public abstract class Card implements StatusControl {
 
     public Card(String number) {
         this.number = number;
-        this.active = true;
     }
     
     @Override

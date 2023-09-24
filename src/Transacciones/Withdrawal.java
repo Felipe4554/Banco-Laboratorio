@@ -13,10 +13,11 @@ import java.util.Date;
  */
 public class Withdrawal extends Transaction {
 
-    public Withdrawal(double amount, Account source, Date date) {
-        super(amount, source, date);
+    public Withdrawal(double amount, Account source) {
+        super(amount, source);
     }
     
+    @Override
     public boolean execute(){
         return true;
     }

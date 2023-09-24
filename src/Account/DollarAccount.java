@@ -1,11 +1,11 @@
 package Account;
 
-import Usuarios.Customer;
+import Person.Customer;
 
 public class DollarAccount extends Account {
     
-    public DollarAccount(String number, double balance, Customer customer, boolean active) {
-        super(number, balance, customer, active);
+    public DollarAccount(String number, double balance, Customer customer) {
+        super(number, balance, customer);
     }
     
     public static double exchangeRate() {   
