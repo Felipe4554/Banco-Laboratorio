@@ -8,7 +8,7 @@ package Card;
  *
  * @author ´Felipe Chacón
  */
-public class CreditCard {
+public class CreditCard extends Card{
     private double balance;
     private double creditLimit;
     private static double interestRate;
@@ -28,16 +28,28 @@ public class CreditCard {
     public CreditCard(double balance, double creditLimit) {
         this.balance = balance;
         this.creditLimit = creditLimit;
-        //Hay que añadir la tasa de interes
+        this.interestRate = getInterestRate();    
     }
     
+    @Override
     public boolean MakePurchase(double amount){
-        
-        return true;  
+        if (isActive() && amount > 0) {
+            if (balance + amount <= creditLimit) {
+                balance += amount; 
+                return true; 
+            }
+        }
+        return false; 
     }
+
     
     public boolean MakePayment(double amount){
-        
-        return true;  
+        if (isActive() && amount > 0) {
+            if (balance >= amount) {
+                balance -= amount; 
+                return true; 
+            }
+        }
+        return false;  
     }
 }

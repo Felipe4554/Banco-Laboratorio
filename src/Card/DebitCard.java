@@ -10,21 +10,26 @@ import Account.Account;
  *
  * @author ´Felipe Chacón
  */
-public class DebitCard {
+public class DebitCard extends Card{
     private Account account;
 
     public Account getAccount() {
         return account;
     }
 
-    public DebitCard(Account account) {
+    public DebitCard(Account account, String number) {
+        super(number);
         this.account = account;
-        // debe heredar el numero de tarjeta number = numer;
     }
     
     
+    @Override
     public boolean MakePurchase(double amount){
-        
-        return true;  
+        if (isActive()   && amount >0 && account != null){
+            if(account.withdraw(amount)){
+                return true;
+            }
+        }
+        return false;
     }
 }
