@@ -10,6 +10,7 @@ import Person.Controller.UserController;
 import Person.Daos.UserDaoList;
 import Person.User;
 import Person.Views.UserConsoleView;
+import Person.Views.UserFrmView;
 import Views.View;
 
 /**
@@ -23,7 +24,8 @@ public class Test {
      */
     public static void main(String[] args) {
         Dao userDao = new UserDaoList();
-        View userView = new UserConsoleView();
+        UserFrmView userView = new UserFrmView();
+        userView.setVisible(true);
         Controller userController = new UserController(userView,userDao);
         User user1 = new User("1","Juan","JJ","123");
         User user2 = new User("2","Felipe","FF","xyz");
@@ -31,6 +33,7 @@ public class Test {
         userController.create(user1);
         userController.create(user2);
         userController.create(user3);
+        userController.read("2");
     }
     
 }

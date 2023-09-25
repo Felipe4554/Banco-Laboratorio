@@ -39,7 +39,15 @@ public class UserController implements Controller<User>{
 
     @Override
     public User read(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        UserDto userDto = (UserDto) dao.read(id);
+        if(userDto == null){
+            view.displayMessage("Id de usuario no encontrado");
+        }else{
+            User user = new User(userDto.getId(),userDto.getName(),userDto.getUsername(),userDto.getPassword());
+            view.display(user);
+            return user;
+        }
+        return null;
     }
 
     @Override

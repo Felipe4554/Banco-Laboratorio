@@ -13,6 +13,12 @@ public class User extends Person{
         this.username = username;
         this.password = encrypt(password);
     }
+    
+        public User(String id, String name, String username, int password) {
+        super(id, name);
+        this.username = username;
+        this.password = password;
+    }
 
     public String getUsername() {
         return username;
@@ -22,8 +28,8 @@ public class User extends Person{
         return password;
     }
 
-    public void setPassword(int password) {
-        this.password = password;
+    public void setPassword(String password) {
+        this.password = encrypt(password);
     }
     
     private int encrypt(String password) {
