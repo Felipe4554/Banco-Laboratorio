@@ -8,11 +8,7 @@ public class User extends Person{
     private String username;
     private int password;
 
-<<<<<<< HEAD
-    public User(String id, String name, String username, String password) {
-=======
-    public User(String username, int password, String id, String name) {
->>>>>>> a4a333f671d5a681a16e98a805ec5d6dfaf5f92e
+    public User(String username, String password, String id, String name) {
         super(id, name);
         this.username = username;
         this.password = encrypt(password);
