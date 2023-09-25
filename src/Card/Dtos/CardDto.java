@@ -2,15 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Card;
+package Card.Dtos;
 
+import Card.*;
 import StatusControl.StatusControl;
 
 /**
  *
  * @author ´Felipe Chacón
  */
-public abstract class Card implements StatusControl {
+public abstract class CardDto {
     private String number;
     private boolean active;
 
@@ -22,19 +23,9 @@ public abstract class Card implements StatusControl {
         return active;
     }
 
-    public Card(String number) {
+    public CardDto(String number) {
         this.number = number;
-    }
-    
-    @Override
-    public void activate(){
         this.active = true;
     }
-    
-    @Override
-    public void deactivate(){
-        this.active = false;
-    }
-    
-    public abstract boolean MakePurchase(double amount);
+
 }

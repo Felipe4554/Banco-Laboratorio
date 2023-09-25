@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package Person.Daos;
+package Transacciones.Daos;
 
-import Crud.Crud;
+import Person.Daos.*;
 import java.util.List;
 
 /**

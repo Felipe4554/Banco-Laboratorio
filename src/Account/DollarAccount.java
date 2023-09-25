@@ -3,16 +3,17 @@ package Account;
 import Person.Customer;
 
 public class DollarAccount extends Account {
+    
+    public DollarAccount(String number, double balance, Customer customer) {
+        super(number, balance, customer);
+    }
     private static double exchangeRate;
 
     public DollarAccount(String number, double balance, Customer customer, double exchangeRate) {
         super(number, balance, customer);
         setExchangeRate(exchangeRate);
     }
-    
-    public DollarAccount(String number, double balance, Customer customer) {
-        super(number, balance, customer);
-    }
+   
 
     public DollarAccount(String number, Customer customer) {
         super(number, customer);

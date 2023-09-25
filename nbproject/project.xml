@@ -3,7 +3,11 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+<<<<<<< HEAD
             <name>Laboratorio1</name>
+=======
+            <name>Laboratorio #1 Progra II</name>
+>>>>>>> dc1252bd581d18b813222dcb431df6617416f0ef
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>

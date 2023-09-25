@@ -1,5 +1,13 @@
 package Person.Dtos;
 
+
+import Person.*;
+
+/**
+ *
+ * @author rsand
+ */
+
 public class UserDto extends PersonDto{
     private String username;
     private int password;
@@ -8,6 +16,7 @@ public class UserDto extends PersonDto{
         super(id, name);
         this.username = username;
         this.password = password;
+
     }
 
     public String getUsername() {
@@ -17,6 +26,7 @@ public class UserDto extends PersonDto{
     public int getPassword() {
         return password;
     }
+
 }
 
 

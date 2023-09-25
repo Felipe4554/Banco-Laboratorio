@@ -13,12 +13,12 @@ import java.util.Date;
  * @author rsand
  */
 public class Customer extends Person {
-   private Date dateOfBirth;
+   private Date dateOfBirth; 
    private String phone;  
    private String email;
    private String address;
 
-    public Customer(Date dateOfBirth, String phone, String email, String address, String id, String name) {
+    public Customer(String id, String name, Date dateOfBirth, String phone, String email, String address ) {
         super(id, name);
         this.dateOfBirth = dateOfBirth;
         this.phone = phone;
@@ -33,7 +33,6 @@ public class Customer extends Person {
         this.email = email;
         this.address = address;
     }
-    
 
     public Date getDateOfBirth() {
         return dateOfBirth;
