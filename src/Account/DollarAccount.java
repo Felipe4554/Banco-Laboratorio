@@ -7,17 +7,32 @@ public class DollarAccount extends Account {
     public DollarAccount(String number, double balance, Customer customer) {
         super(number, balance, customer);
     }
-    
-    public static double exchangeRate() {   
-        return 530;
+    private static double exchangeRate;
+
+    public DollarAccount(String number, double balance, Customer customer, double exchangeRate) {
+        super(number, balance, customer);
+        setExchangeRate(exchangeRate);
+    }
+   
+
+    public DollarAccount(String number, Customer customer) {
+        super(number, customer);
+    }
+
+    public static double getExchangeRate() {
+        return exchangeRate;
+    }
+
+    public static void setExchangeRate(double exchangeRate) {
+        DollarAccount.exchangeRate = exchangeRate;
     }
     
     public boolean transfer(Account destination, double amount) {
         if (destination instanceof ColonAccount) {
-            double conversionRate = DollarAccount.exchangeRate();
-            double amountInColones = amount * conversionRate;
-            if (super.withdraw(amount)) {
-                destination.deposit(amountInColones);
+            double exchangeRate = getExchangeRate();
+            double convertedAmount = amount * exchangeRate;
+
+            if (super.transfer(destination, convertedAmount)) {
                 return true;
             } else {
                 return false;

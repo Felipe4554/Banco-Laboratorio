@@ -1,10 +1,8 @@
+package Cruds;
 
-package Controller;
-        
-import Cruds.Crud;
 import java.util.List;
 
-public interface Controller<Class> extends Crud<Class> {
+public interface Crud<Class> {
     public boolean create(Class obj);
     public Class read(String id);
     public List<Class> readAll();

@@ -21,4 +21,5 @@ public class WithdrawalDto {
         this.source = source;
         this.date = date;
     }
+
 }

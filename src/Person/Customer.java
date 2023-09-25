@@ -25,14 +25,15 @@ public class Customer extends Person {
         this.email = email;
         this.address = address;
     }
-    public Customer(String id, String name,Date dateOfBirth, String email, String address) {
+
+    public Customer(Date dateOfBirth, String email, String address, String id, String name) {
         super(id, name);
         this.dateOfBirth = dateOfBirth;
         this.phone = "";
         this.email = email;
         this.address = address;
     }
-   
+
     public Date getDateOfBirth() {
         return dateOfBirth;
     }

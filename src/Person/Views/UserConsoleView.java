@@ -5,7 +5,7 @@
 package Person.Views;
 
 import Person.User;
-import Views.View;
+import javax.swing.text.View;
 
 /**
  *
@@ -22,5 +22,5 @@ public class UserConsoleView implements View<User> {
     public void displayMessage(String msg) {
         System.out.println(msg);
     }
-    
+
 }

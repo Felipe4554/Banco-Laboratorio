@@ -8,7 +8,6 @@ import Person.Dtos.UserDto;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 /**
  *
  * @author rsand
@@ -19,7 +18,7 @@ public class UserDaoList implements Dao<UserDto>{
     public UserDaoList() {
         userList = new HashMap();
     }
-     
+
     @Override
     public boolean create(UserDto user) {
         if(user==null) return false;
@@ -36,7 +35,6 @@ public class UserDaoList implements Dao<UserDto>{
     public List<UserDto> readAll() {
         return new ArrayList<>(userList.values());
     }
-    
 
     @Override
     public boolean update(UserDto user) {
@@ -48,4 +46,4 @@ public class UserDaoList implements Dao<UserDto>{
         return userList.remove(user.getId())!=null;
     }
     
-}
+    }
