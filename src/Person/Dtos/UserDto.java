@@ -12,7 +12,7 @@ public class UserDto extends PersonDto{
     private String username;
     private int password;
 
-    public UserDto(String username, int password, String id, String name) {
+    public UserDto(String id, String name, String username, int password) {
         super(id, name);
         this.username = username;
         this.password = password;

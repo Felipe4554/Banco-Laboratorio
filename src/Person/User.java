@@ -8,7 +8,7 @@ public class User extends Person{
     private String username;
     private int password;
 
-    public User(String username, String password, String id, String name) {
+    public User(String id, String name, String username, String password) {
         super(id, name);
         this.username = username;
         this.password = encrypt(password);

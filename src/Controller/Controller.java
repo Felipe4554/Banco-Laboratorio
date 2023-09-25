@@ -1,7 +1,7 @@
 
 package Controller;
         
-import Cruds.Crud;
+import Crud.Crud;
 import java.util.List;
 
 public interface Controller<Class> extends Crud<Class> {

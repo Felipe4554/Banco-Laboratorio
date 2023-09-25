@@ -1,4 +1,4 @@
-package Cruds;
+package Crud;
 
 import java.util.List;
 

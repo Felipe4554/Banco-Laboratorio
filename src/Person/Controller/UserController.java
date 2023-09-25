@@ -2,48 +2,59 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Transacciones.Daos;
+package Person.Controller;
 
+import Controller.Controller;
 import Dao.Dao;
 import Person.Dtos.UserDto;
-import Transacciones.Dtos.WithdrawalDto;
-import java.util.HashMap;
+import Person.User;
+import Views.View;
 import java.util.List;
 
-/**
- *
- * @author rsand
- */
-public class WithdrawalDaoList implements Dao<WithdrawalDto>{
-     private HashMap<String,UserDto> withdrawalList;
+public class UserController implements Controller<User>{
+    private View view;
+    private Dao dao;
 
-    public WithdrawalDaoList() {
-        withdrawalList = new HashMap();
+    public UserController(View view, Dao dao) {
+        this.view = view;
+        this.dao = dao;
     }
 
     @Override
-    public boolean create(WithdrawalDto obj) {
+    public boolean create(User user) {
+        if (dao.read(user.getId())!=null){
+            view.displayMessage("Id de usuario duplicado");
+            return false;
+        }else{
+            UserDto userDto = new UserDto(user.getId(),user.getName(),user.getUsername(), user.getPassword());
+            if (dao.create(userDto)){
+                view.displayMessage("Usuario agregado correctamente");
+                return true;
+            }else{
+                view.displayMessage("Error al agregar usuario");
+                return false;
+            }
+        }
+    }
+
+    @Override
+    public User read(String id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public WithdrawalDto read(String id) {
+    public List<User> readAll() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public List<WithdrawalDto> readAll() {
+    public boolean update(User obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public boolean update(WithdrawalDto obj) {
+    public boolean delete(User obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
-    @Override
-    public boolean delete(WithdrawalDto obj) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
+    
 }

@@ -1,6 +1,6 @@
 package Account.Daos;
 
-import Cruds.Crud;
+import Crud.Crud;
 import java.util.List;
 
 public interface Dao<Class> extends Crud<Class> {

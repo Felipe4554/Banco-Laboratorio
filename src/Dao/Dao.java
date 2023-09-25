@@ -4,17 +4,13 @@
  */
 package Dao;
 
-import java.util.List;
+import Crud.Crud;
 
 /**
  *
  * @author ´Felipe Chacón
+ * @param <Class>
  */
-public interface Dao <Class>{
-    //OPERACIONES CRUD
-    public boolean create(Class obj);  
-    public List<Class> readAll();
-    public boolean update (Class obj);
-    public boolean delete(Class obj);
-    
+public interface Dao <Class> extends Crud<Class>{
+
 }
