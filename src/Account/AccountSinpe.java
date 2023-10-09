@@ -9,17 +9,17 @@ public class AccountSinpe {
         this.account = account;
     }
 
-    public boolean hacerPago(double monto) {
-        if (monto > 0 && account.getBalance() >= monto) {
-            return account.withdraw(monto);
+    public boolean hacerPago(double amount) {
+        if (amount > 0 && account.getBalance() >= amount) {
+            return account.withdraw(amount);
         } else {
             return false;
         }
     }
 
-    public boolean recibirPago(double monto) {
-        if (monto > 0) {
-            return account.deposit(monto);
+    public boolean recibirPago(double amount) {
+        if (amount > 0) {
+            return account.deposit(amount);
         } else {
             return false;
         }

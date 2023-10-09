@@ -1,50 +1,36 @@
-package Transacciones.Daos;
+package Transaction.Daos;
 
 import Dao.Dao;
+import Transaction.Dtos.DepositDto;
 import java.util.HashMap;
 import java.util.List;
-import Transacciones.Dtos.TransferDto;
 
-/**
- *
- * @author ´Felipe Chacón
- */
-public class TransferDaoList implements Dao <TransferDto> {
-        
-    private HashMap <String, TransferDto> transferlist;
-    private static TransferDaoList instance;
+public class DepositDaoLis implements Dao<DepositDto>{
+     private HashMap<String,DepositDto> depositList;
 
-    public TransferDaoList() {
-        this.transferlist = new HashMap();
+    public DepositDaoLis() {
+        depositList = new HashMap();
     }
-    public static TransferDaoList getInstance(){
-        if(instance == null){
-            instance = new TransferDaoList();
-        }
-        return instance;
-    }
-    @Override
-    public boolean create(TransferDto obj) {
+
+    public boolean create(DepositDto obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public TransferDto read(String id) {
+    public DepositDto read(String id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public List<TransferDto> readAll() {
+    public List<DepositDto> readAll() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public boolean update(TransferDto obj) {
+    public boolean update(DepositDto obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public boolean delete(TransferDto obj) {
+    public boolean delete(DepositDto obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    
 }

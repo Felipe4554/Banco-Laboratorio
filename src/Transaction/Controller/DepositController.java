@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Transacciones.Controller;
+package Transaction.Controller;
 
 import Controller.Controller;
 import Dao.Dao;
-import Transacciones.Transaction;
+import Transaction.Transaction;
 import Views.View;
 import java.util.List;
 

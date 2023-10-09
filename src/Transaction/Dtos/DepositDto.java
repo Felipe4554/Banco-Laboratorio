@@ -1,6 +1,5 @@
-package Transacciones.Dtos;
+package Transaction.Dtos;
 
-import Transacciones.*;
 import Account.Account;
 import java.util.Date;
 

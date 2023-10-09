@@ -2,9 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Transacciones.Dtos;
+package Transaction.Dtos;
 
-import Transacciones.*;
 import Account.Account;
 import java.util.Date;
 
@@ -12,18 +11,15 @@ import java.util.Date;
  *
  * @author rsand
  */
-public class TransferDto {
-    private Account destination;
+public class WithdrawalDto {
     private double amount;
     private Account source;
+    private Date date;
 
-    public TransferDto(Account destination, double amount, Account source) {
-        this.destination = destination;
+    public WithdrawalDto(double amount, Account source, Date date) {
         this.amount = amount;
         this.source = source;
+        this.date = date;
     }
-    
-    public Account getDestination() {
-        return destination;
-    }
+
 }

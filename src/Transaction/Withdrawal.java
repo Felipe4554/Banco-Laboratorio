@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Transacciones;
+package Transaction;
 
 import Account.Account;
 import java.util.Date;
@@ -11,12 +11,12 @@ import java.util.Date;
  *
  * @author rsand
  */
-public class Deposit extends Transaction {
+public class Withdrawal extends Transaction {
 
-    public Deposit(double amount, Account source) {
+    public Withdrawal(double amount, Account source) {
         super(amount, source);
     }
-
+    
     @Override
     public boolean execute(){
         return true;

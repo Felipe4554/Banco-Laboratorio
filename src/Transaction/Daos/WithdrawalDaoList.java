@@ -1,8 +1,8 @@
-package Transacciones.Daos;
+package Transaction.Daos;
 
 import Dao.Dao;
 import Person.Dtos.UserDto;
-import Transacciones.Dtos.WithdrawalDto;
+import Transaction.Dtos.WithdrawalDto;
 import java.util.HashMap;
 import java.util.List;
 
