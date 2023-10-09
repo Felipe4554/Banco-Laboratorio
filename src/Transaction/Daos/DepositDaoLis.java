@@ -1,7 +1,7 @@
-package Transacciones.Daos;
+package Transaction.Daos;
 
 import Dao.Dao;
-import Transacciones.Dtos.DepositDto;
+import Transaction.Dtos.DepositDto;
 import java.util.HashMap;
 import java.util.List;
 
