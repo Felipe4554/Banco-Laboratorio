@@ -1,57 +1,44 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Card.Daos;
+package Transacciones.Daos;
 
-import Card.Dtos.DebitCardDto;
 import Dao.Dao;
+import Transacciones.Dtos.DepositDto;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- *
- * @author ´Felipe Chacón
- */
-public class DebitCardDaoList implements Dao <DebitCardDto>{
-    
-    private HashMap <String, DebitCardDto> debitcardlist;
-    private static DebitCardDaoList instance;
+public class DepositDaoList implements Dao<DepositDto>{
+     private HashMap<String,DepositDto> depositList;
+     private static DepositDaoList instance;
 
-    public DebitCardDaoList() {
-        this.debitcardlist = new HashMap();
+    public DepositDaoList() {
+        depositList = new HashMap();
     }
     
-     public static DebitCardDaoList getInstance() {
+     public static DepositDaoList getInstance() {
         if (instance == null) {
-            instance = new DebitCardDaoList();
+            instance = new DepositDaoList();
         }
         return instance;
     }
-    
-    @Override
-    public boolean create(DebitCardDto obj) {
+
+    public boolean create(DepositDto obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public List<DebitCardDto> readAll() {
+    public DepositDto read(String id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public boolean update(DebitCardDto obj) {
+    public List<DepositDto> readAll() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public boolean delete(DebitCardDto obj) {
+    public boolean update(DepositDto obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public DebitCardDto read(String id) {
+    public boolean delete(DepositDto obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
     
 }
