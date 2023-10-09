@@ -9,11 +9,17 @@ import java.util.List;
 public class CustomerDaoList implements Dao<CustomerDto> {
 
     private HashMap<String, CustomerDto> customerList;
-
+    private static CustomerDaoList instance;
+    
     public CustomerDaoList() {
         customerList = new HashMap();
     }
-
+    public static CustomerDaoList getInstance(){
+        if(instance == null){
+            instance = new CustomerDaoList();
+        }
+        return instance;
+    }
     public boolean create(CustomerDto customer) {
         if (customer == null) {
             return false;

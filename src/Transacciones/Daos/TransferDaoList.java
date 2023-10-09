@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Transacciones.Daos;
 
 import Dao.Dao;
@@ -16,11 +12,17 @@ import Transacciones.Dtos.TransferDto;
 public class TransferDaoList implements Dao <TransferDto> {
         
     private HashMap <String, TransferDto> transferlist;
+    private static TransferDaoList instance;
 
     public TransferDaoList() {
         this.transferlist = new HashMap();
     }
-
+    public static TransferDaoList getInstance(){
+        if(instance == null){
+            instance = new TransferDaoList();
+        }
+        return instance;
+    }
     @Override
     public boolean create(TransferDto obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
