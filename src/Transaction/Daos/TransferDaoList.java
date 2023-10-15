@@ -1,6 +1,6 @@
-package Transacciones.Daos;
+package Transaction.Daos;
 
-import Dao.Dao;
+import InterfaceDaoListTransaction.DaoListTransaction;
 import java.util.HashMap;
 import java.util.List;
 import Transacciones.Dtos.TransferDto;
@@ -9,7 +9,7 @@ import Transacciones.Dtos.TransferDto;
  *
  * @author ´Felipe Chacón
  */
-public class TransferDaoList implements Dao <TransferDto> {
+public class TransferDaoList implements DaoListTransaction <TransferDto> {
         
     private HashMap <String, TransferDto> transferlist;
     private static TransferDaoList instance;
@@ -38,13 +38,4 @@ public class TransferDaoList implements Dao <TransferDto> {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public boolean update(TransferDto obj) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public boolean delete(TransferDto obj) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

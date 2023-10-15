@@ -1,4 +1,4 @@
-package Transacciones.Daos;
+package Transaction.Daos;
 
 import Controller.Controller;
 import Views.View;

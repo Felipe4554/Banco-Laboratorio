@@ -1,12 +1,13 @@
-package Transacciones.Daos;
+package Transaction.Daos;
 
 import Dao.Dao;
+import InterfaceDaoListTransaction.DaoListTransaction;
 import Person.Dtos.UserDto;
 import Transacciones.Dtos.WithdrawalDto;
 import java.util.HashMap;
 import java.util.List;
 
-public class WithdrawalDaoList implements Dao<WithdrawalDto>{
+public class WithdrawalDaoList implements DaoListTransaction<WithdrawalDto>{
     
      private HashMap<String,UserDto> withdrawalList;
      private static WithdrawalDaoList instance;
@@ -35,16 +36,6 @@ public class WithdrawalDaoList implements Dao<WithdrawalDto>{
     @Override
     public List<WithdrawalDto> readAll() {
          return null;
-    }
-
-    @Override
-    public boolean update(WithdrawalDto obj) {
-         return false;
-    }
-
-    @Override
-    public boolean delete(WithdrawalDto obj) {
-         return false;
     }
 
 }
