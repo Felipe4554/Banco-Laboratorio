@@ -3,7 +3,7 @@ package Transaction.Daos;
 import InterfaceDaoListTransaction.DaoListTransaction;
 import java.util.HashMap;
 import java.util.List;
-import Transacciones.Dtos.TransferDto;
+import Transaction.Dtos.TransferDto;
 
 /**
  *
