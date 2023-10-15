@@ -1,36 +1,51 @@
-package Transacciones.Daos;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Transacciones.Controller;
 
+import Controller.Controller;
 import Dao.Dao;
-import Transacciones.Dtos.DepositDto;
-import java.util.HashMap;
+import Transacciones.Withdrawal;
+import Views.View;
 import java.util.List;
 
-public class DepositDaoLis implements Dao<DepositDto>{
-     private HashMap<String,DepositDto> depositList;
+/**
+ *
+ * @author ´Felipe Chacón
+ */
+public class WithdrawalController implements Controller <Withdrawal> {
+    private View view;
+    private Dao dao;
 
-    public DepositDaoLis() {
-        depositList = new HashMap();
+    public WithdrawalController(View view, Dao dao) {
+        this.view = view;
+        this.dao = dao;
     }
-
-    public boolean create(DepositDto obj) {
+    
+    @Override
+    public boolean create(Withdrawal obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public DepositDto read(String id) {
+    @Override
+    public Withdrawal read(String id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public List<DepositDto> readAll() {
+    @Override
+    public List<Withdrawal> readAll() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public boolean update(DepositDto obj) {
+    @Override
+    public boolean update(Withdrawal obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public boolean delete(DepositDto obj) {
+    @Override
+    public boolean delete(Withdrawal obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
     
 }
