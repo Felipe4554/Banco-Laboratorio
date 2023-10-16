@@ -7,6 +7,7 @@ package Bank;
 import Account.Account;
 import Card.Card;
 import Person.Customer;
+import Person.User;
 import Transaction.Transaction;
 import Transaction.Transfer;
 import Transaction.Withdrawal;
@@ -18,13 +19,14 @@ import java.util.Date;
         private FactoryAccount accountFactory;
         private FactoryCustomer customerFactory;
         private FactoryTransaction transactionFactory;
-        private FactoryUser userFactory
+        private FactoryUser userFactory;
 
         public BankFacade() {
             this.cardFactory = new FactoryCard();
             this.accountFactory = new FactoryAccount();
             this.customerFactory = new FactoryCustomer();
             this.transactionFactory = new FactoryTransaction();
+            this.userFactory = new FactoryUser();
         }
 
         public Card createCard(int type, String number, double balance, double creditLimit, double interestRate, Account account) {
@@ -43,7 +45,10 @@ import java.util.Date;
             return transactionFactory.factory(amount, source, destination, type);
         }
 
-        // Puedes agregar más métodos de fachada aquí para otras operaciones relacionadas con el banco.
+        public User createUSer(String id, String name, String username, int password) {
+            return userFactory.factory(id, name, username, password);
+        }
+
     }
 
     
