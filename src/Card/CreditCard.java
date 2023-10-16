@@ -24,7 +24,6 @@ public class CreditCard extends Card{
         return interestRate;
     }
     
-    
     @Override
     public boolean MakePurchase(double amount){
         if (isActive() && amount > 0) {

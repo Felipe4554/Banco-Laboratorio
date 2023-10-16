@@ -8,7 +8,8 @@ import Account.Account;
 import Card.Card;
 import Person.Customer;
 import Person.User;
-import Transacciones.Transaction;
+import Transaction.Transaction;
+import java.sql.Date;
 
 /**
  *
@@ -17,16 +18,20 @@ import Transacciones.Transaction;
 public class Bank {
     
     public void crearUsuario(String id, String nombre, String username, String password){
+        FactoryUser userFactory = new FactoryUser();
         User u1 = new User(id,nombre,username,password);
+        DaoUser du = new DaoUser;
+        du.create(u1);
+        System.out.println("Se creo un usuario");
+    }
+    
+    public void crearCliente(String id, String name, Date dateOfBirth, String phone, String email, String address){
+        FactoryCustomer customerFactory = new FactoryCustomer();
+        Customer c1 = new Customer(id, name, dateOfBirth, phone, email, address);
         System.out.println("Se creo un cliente");
     }
     
-    public void crearCliente(/*Parametros*/){
-        Customer c1 = new Customer(/*Parametros*/);
-        System.out.println("Se creo un cliente");
-    }
-    
-    public void crearCuenta(){
+    public void crearCuenta(int type, String number, double balance, double creditLimit, double interestRate, Account account){
         FactoryAccount fc = new FactoryAccount();
         Account a1 = fc.factory(id, balance, customer, type);
         DaoAccount da = new DaoAccount;
@@ -35,13 +40,15 @@ public class Bank {
        
     }
     
-    public void crearTarjeta(){
-        Card cd1 = new Card(/*Parametros*/);
+    public void crearTarjeta(int type, String number, double balance, double creditLimit, double interestRate, Account account){
+        FactoryCard cardFactory = new FactoryCard();
+        Card cd1 = new Card(type, number, balance, creditLimit, interestRate, account);
         System.out.println("Se creo una tarjeta");
     }
     
-    public void crearTransaccion(/*Parametros*/){
-        Transaction t1 = new Transaction(/*Parametros*/);
+    public void crearTransaccion(double amount, Account source, Account destination, int type){
+        FactoryTransaction transactionFactory = new FactoryTransaction();
+        Transaction t1 = new Transaction(amount, source, destination, type);
         System.out.println("Se creo una transaccion");
     }
     
