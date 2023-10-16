@@ -29,8 +29,8 @@ import java.util.Date;
             this.userFactory = new FactoryUser();
         }
 
-        public Card createCard(int type, String number, double balance, double creditLimit, double interestRate, Account account) {
-            return cardFactory.factory(type, number, balance, creditLimit, interestRate, account);
+        public Card createCard(String number,Account account, double balance, double creditLimit, double interestRate, boolean active, int type) {
+            return cardFactory.factory(number, account, balance, creditLimit, interestRate, active, type);
         }
 
         public Account createAccount(String id, double balance, Customer customer, int type) {

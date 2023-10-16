@@ -10,11 +10,11 @@ import Card.CreditCard;
 import Card.DebitCard;
 
 public class FactoryCard {
-    public Card factory(int type, String number, double balance, double creditLimit, double interestRate, Account account) {
+    public Card factory(String number,Account account, double balance, double creditLimit, double interestRate, boolean active, int type) {
         if (type == 1) {
-            return new CreditCard(number, balance, creditLimit, interestRate);
+            return new CreditCard(number, balance, creditLimit, interestRate, active);
         } else {
-            return new DebitCard(account, number);
+            return new DebitCard(account, number, active);
         }
     }
 }
