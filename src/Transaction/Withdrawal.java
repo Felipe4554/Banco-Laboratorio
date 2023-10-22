@@ -24,14 +24,17 @@ public class Withdrawal extends Transaction {
         super(amount, source, date);
     }
 
+    @Override
     public double getAmount() {
         return amount;
     }
 
+    @Override
     public Account getSource() {
         return source;
     }
 
+    @Override
     public Date getDate() {
         return date;
     }
@@ -53,6 +56,7 @@ public class Withdrawal extends Transaction {
     }
 
     // Método para guardar el estado de la retirada utilizando el patrón Memento
+    @Override
     public Withdrawal saveToMemento() {
         return this.clone();
     }
