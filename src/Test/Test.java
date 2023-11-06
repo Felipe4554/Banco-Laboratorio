@@ -5,6 +5,7 @@
 package Test;
 
 import Controller.Controller;
+import Dao.BD.DaoBD;
 import Dao.Dao;
 import Person.Controller.UserController;
 import Person.Daos.UserDaoList;
@@ -34,6 +35,11 @@ public class Test {
 //        userController.create(user2);
 //        userController.create(user3);
 //        userController.read("2");
+
+    
+        DaoBD bd = new DaoBD();
+        bd.connect();
     }
+    
     
 }
