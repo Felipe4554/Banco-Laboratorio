@@ -39,6 +39,9 @@ public class Test {
     
         DaoBD bd = new DaoBD();
         bd.connect();
+        //bd.createStatement("Insert Into users values('1','Juan','JP','123')");
+        
+        bd.createStatement("call UserInsert('2','Felipe','fp','123')");
     }
     
     

@@ -4,7 +4,6 @@
  */
 package Dao.BD;
 
-import com.mysql.cj.jdbc.Driver;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
@@ -19,7 +18,7 @@ import java.util.logging.Logger;
  * @author ´Felipe Chacón
  */
 public class DaoBD {
-    private Connection connector;
+    private Connection connection;
     private Statement statement;
     private ResultSet  resultset; 
 
@@ -33,9 +32,18 @@ public class DaoBD {
     
     public void connect(){
         try {
-            this.connector = DriverManager.getConnection("jdbc:mysql://127.0.0.1/bank", "java", "123");
+            this.connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/bank", "java", "123");
         } catch (SQLException ex) {
             System.out.println("Error al conectar"+ ex.toString());
+        }
+    }
+    
+    public void createStatement(String sql) {
+        try {
+            this.statement = this.connection.createStatement();
+            this.statement.execute(sql);
+                    } catch (SQLException ex) {
+            System.out.println("Error al ejecutar la sentencia"+ex.toString());
         }
     }
     
